@@ -1,0 +1,56 @@
+
+/*
+Theme Name: Personal Homepage
+Author: Chen Yupan
+Time: 2015-09-08
+*/
+
+/* BODY AND CONTAINER */
+body {background:#333; font-family:'Open Sans', sans-serif; font-size:1em; line-height:1.5em;}
+#container {max-width:1160px; background:#fff; color:#000; border:1px solid #eee; margin:10px auto 10px; padding:20px; text-align:left; word-wrap:break-word;}
+#content {width:62%; float:left; padding:10px 0 20px; word-wrap:break-word;}
+
+/* HEADINGS */
+h1 {font-size:3.0em; line-height:1.2em;}
+h2 {font-size:2.5em; line-height:1.2em;}
+h3 {font-size:2.0em; line-height:1.5em;}
+h4 {font-size:1.5em; line-height:1.5em;}
+h5 {font-size:1.0em; line-height:2em;}
+h6 {font-size:0.75em; line-height:2em;}
+
+/* LINKS AND HTML TAGS */
+a {text-decoration:underline; color:#000;}
+a:hover {text-decoration:none; color:#333;}
+
+/* HEADER LOGO */
+#header .logo {width:100%; float:left; text-align:left; padding:0 0 20px;}
+#header .logo h1 a {text-decoration:none;}
+#header .logo h4 {padding:0 20px;}
+
+/* PAGE */
+.page-title {padding:0 0 10px;}
+.pagelink {clear:both; margin:20px 0 10px;}
+
+/* POST */
+.post-title {padding:0;}
+.post-title a {text-decoration:none;}
+.sticky {text-align:center; clear:both; color:#000; background:#f8f8f8; margin:10px 0; padding:5px; border:1px solid #ccc;}
+.postmetadata {clear:both; margin:20px 0; padding:5px 10px; background:#000; color:#fff; border:0;}
+.postmetadata a {color:#ccc; text-decoration:none;}
+.postmetadata a:hover {color:#fff; text-decoration:none;}
+.more {clear:both; margin:20px 0; padding:0 0 20px; border-bottom:1px solid #ccc;}
+.more:after {content:''; display:block; clear:both;}
+a.readmore {float:right; padding:2px 5px; background:#000; color:#fff; text-decoration:none;}
+a.readmore:hover {background:#333; text-decoration:none;}
+
+/* SIDEBAR AND WIDGETS */
+#sidebar {width:36%; float:right; margin:0; padding:10px 0 0; word-wrap:break-word;}
+.widget {padding:0 0 10px; margin:0 0 20px; border-bottom:1px solid #ccc;}
+.widgettitle {background:#000; color:#fff; padding:5px 10px; margin:10px 0;}
+
+/* FOOTER */
+#footer .site-info {text-align:center; clear:both; padding:10px; background:#000;}
+#footer .site-info span {color:#ccc; text-decoration:none;}
+#footer .site-info span:hover {color:#fff; text-decoration:none;}
+
+
