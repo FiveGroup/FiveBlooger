@@ -14,10 +14,12 @@ public interface ILoginService {
 	
 	@GET
 	@Path("/login/{username}/{password}")
-	public Map<String,Object> loggin(@PathParam("username") String username,@PathParam("password") String password,
+	@Produces("application/json")
+	public boolean loggin(@PathParam("username") String username,@PathParam("password") String password,
 			@Context HttpServletRequest request);
 	
 	@GET
 	@Path("/logout/{username}")
-	public Map<String,Object> logout(@PathParam("username") String username,@Context HttpServletRequest request);
+	@Produces("application/json")
+	public boolean logout(@PathParam("username") String username,@Context HttpServletRequest request);
 }

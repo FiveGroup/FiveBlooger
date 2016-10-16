@@ -1,8 +1,13 @@
 package org.five.fiveblogger.modul;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Article {
+public class Article implements  Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int artId;
 	private String title;
 	private String content;

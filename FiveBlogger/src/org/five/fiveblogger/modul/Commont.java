@@ -1,9 +1,14 @@
 package org.five.fiveblogger.modul;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Commont {
+public class Commont implements  Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8182209675477519795L;
 	private int commontId;
 	private String content;
 	private Date createTime;
