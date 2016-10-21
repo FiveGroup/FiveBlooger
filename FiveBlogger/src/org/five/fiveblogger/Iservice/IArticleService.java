@@ -2,7 +2,7 @@ package org.five.fiveblogger.Iservice;
 
 import java.util.List;
 
-import org.five.fiveblogger.modul.Article;
+import org.five.fiveblogger.orm.modul.Article;
 
 public interface IArticleService {
 	

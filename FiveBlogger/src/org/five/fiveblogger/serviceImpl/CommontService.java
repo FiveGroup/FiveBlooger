@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.five.fiveblogger.Iservice.ICommontService;
-import org.five.fiveblogger.modul.Commont;
+import org.five.fiveblogger.orm.modul.Commont;
 
 public class CommontService implements ICommontService {
 

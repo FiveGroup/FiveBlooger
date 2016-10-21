@@ -2,7 +2,7 @@ package org.five.fiveblogger.Iservice;
 
 import java.util.List;
 
-import org.five.fiveblogger.modul.Commont;
+import org.five.fiveblogger.orm.modul.Commont;
 
 public interface ICommontService {
 	

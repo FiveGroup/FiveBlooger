@@ -1,4 +1,4 @@
-package org.five.fiveblogger.modul;
+package org.five.fiveblogger.orm.modul;
 
 import java.io.Serializable;
 import java.util.Date;

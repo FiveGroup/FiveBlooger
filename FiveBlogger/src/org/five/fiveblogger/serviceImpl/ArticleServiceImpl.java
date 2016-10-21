@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.five.fiveblogger.Iservice.IArticleService;
-import org.five.fiveblogger.modul.Article;
+import org.five.fiveblogger.orm.modul.Article;
 
 public class ArticleServiceImpl implements IArticleService {
 

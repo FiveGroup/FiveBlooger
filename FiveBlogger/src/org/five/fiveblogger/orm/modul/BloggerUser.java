@@ -1,29 +1,19 @@
-package org.five.fiveblogger.modul;
-
-import java.io.Serializable;
+package org.five.fiveblogger.orm.modul;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "bloggerUser")
-public class BloggerUser implements  Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 749589648075890680L;
-	@XmlAttribute(name = "userId")
+public class BloggerUser{
+	
 	private int userId;
 	
-	@XmlAttribute(name = "userName")
 	private String userName;
 	
-	@XmlAttribute(name = "password")
 	private String password;
 	
-	@XmlAttribute(name = "email")
 	private String email;
 	public int getUserId() {
 		return userId;
