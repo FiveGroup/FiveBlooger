@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.Param;
 import org.five.fiveblogger.orm.modul.BloggerUser;
 
 public interface BloggerUserMapper {
-	void add(BloggerUser user);  
+	void insert(BloggerUser user);  
 	  
 	BloggerUser get(@Param("userId") int userId);  
   
