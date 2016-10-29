@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS `blogger_article`;
 DROP TABLE IF EXISTS `blogger_user`;
 
 CREATE TABLE `blogger_user` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) auto_increment,
   `user_name` char(16) NOT NULL,
   `user_password` char(25) NOT NULL,
   `email` varchar(20) default NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `blogger_user` (
 );
 
 CREATE TABLE `blogger_article` (
-  `art_id` int(11) NOT NULL,
+  `art_id` int(11) auto_increment,
   `art_title` varchar(20) NOT NULL,
   `art_content` longtext NOT NULL,
   `auther_id` int(11) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `blogger_article` (
 ) ;
 
 CREATE TABLE `blogger_comment` (
-  `comment_id` int(11) NOT NULL,
+  `comment_id` int(11) auto_increment,
   `art_id` int(11) NOT NULL,
   `comment_content` varchar(120) NOT NULL,
   `createtime` datetime NOT NULL,
