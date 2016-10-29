@@ -1,37 +1,74 @@
-DROP TABLE IF EXISTS `blogger_comment`;
-DROP TABLE IF EXISTS `blogger_article`;
-DROP TABLE IF EXISTS `blogger_user`;
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Role;
+DROP TABLE IF EXISTS Article;
+DROP TABLE IF EXISTS ArticleType;
+DROP TABLE IF EXISTS Discuss;
+DROP TABLE IF EXISTS Article_Discuss;
 
-CREATE TABLE `blogger_user` (
-  `user_id` int(11) auto_increment,
-  `user_name` char(16) NOT NULL,
-  `user_password` char(25) NOT NULL,
-  `email` varchar(20) default NULL,
-  PRIMARY KEY  (`user_id`)
+/**
+ * 用户表
+ */
+CREATE TABLE User (
+  userId int auto_increment,
+  userName char(16),
+  userPwd char(25),
+  sex varchar(2),
+  registerTime datetime,
+  lastLoginTime datetime,
+  longinCount int,
+  user_role int,
+  email varchar(20) default NULL,
+  PRIMARY KEY  (userId)
 );
 
-CREATE TABLE `blogger_article` (
-  `art_id` int(11) auto_increment,
-  `art_title` varchar(20) NOT NULL,
-  `art_content` longtext NOT NULL,
-  `auther_id` int(11) NOT NULL,
-  `createtime` datetime NOT NULL,
-  `lastupdatetime` datetime default NULL,
-  `likenum` int(11) default NULL,
-  `readtime` int(11) default NULL,
-  PRIMARY KEY  (`art_id`),
-  KEY `auther_id` (`auther_id`),
-  CONSTRAINT `blogger_article_ibfk_1` FOREIGN KEY (`auther_id`) REFERENCES `blogger_user` (`user_id`)
+/**
+ * 角色表
+ */
+CREATE TABLE Role (
+  roleId int auto_increment,
+  roleName char(16),
+  PRIMARY KEY  (roleId)
+);
+
+/**
+ * 文章表
+ */
+CREATE TABLE Article (
+  articleId int auto_increment,
+  title varchar(20) NOT NULL,
+  author int,
+  content text,
+  articleType int,
+  createTime datetime,
+  updateTime datetime,
+  likeCount int,
+  PRIMARY KEY  (articleId)
 ) ;
 
-CREATE TABLE `blogger_comment` (
-  `comment_id` int(11) auto_increment,
-  `art_id` int(11) NOT NULL,
-  `comment_content` varchar(120) NOT NULL,
-  `createtime` datetime NOT NULL,
-  `observer` char(16) NOT NULL,
-  `likenum` int(11) default NULL,
-  PRIMARY KEY  (`comment_id`),
-  KEY `art_id` (`art_id`),
-  CONSTRAINT `blogger_comment_ibfk_1` FOREIGN KEY (`art_id`) REFERENCES `blogger_article` (`art_id`)
+/**
+ * 文章类型表
+ */
+CREATE TABLE ArticleType (
+  typeId int auto_increment,
+  typeName varchar(16),
+  PRIMARY KEY  (typeId)
+) ;
+
+/**
+ * 评论表
+ */
+CREATE TABLE Discuss (
+  discussId int auto_increment,
+  discussContent text ,
+  createtime datetime,
+  PRIMARY KEY  (discussId)
+);
+
+/**
+ * 文章评论关系表
+ */
+CREATE TABLE Article_Discuss (
+  articleId int,
+  discussId int,
+  PRIMARY KEY  (articleId,disCussId)
 );
