@@ -1,0 +1,94 @@
+<!--一级内容-->
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="span12">
+          <!--一级导航-->
+          <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+              <div class="container-fluid">
+                <a class="btn btn-navbar" data-target=".navbar-responsive-collapse" data-toggle="collapse"></a> <a class="brand">FIVEBLOGER收藏/自创</a>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav">
+                    <li :class="{'active':$route.path.includes('/word')}" v-on:click="$root.path('/word')">
+                      <a  >文字</a>
+                    </li>
+                    <li :class="{'active':$route.path.includes('/music')}">
+                      <a v-on:click="$root.path('/music')">音乐</a>
+                    </li>
+                    <li>
+                      <a href="#">图片</a>
+                    </li>
+                    <li>
+                      <a href="#">视频</a>
+                    </li>
+                    <li>
+                      <a href="#">代码</a>
+                    </li>
+                    <li class="dropdown" :class="{'open':fg_show_websites}" v-on:mouseenter="fg_show_websites=true" v-on:mouseleave="fg_show_websites=false">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" >网站<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">百度</a>
+                        </li>
+                        <li>
+                          <a href="#">FT中文</a>
+                        </li>
+                        <li>
+                          <a href="#">微博</a>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li class="nav-header">
+                          购物
+                        </li>
+                        <li>
+                          <a href="#">天猫</a>
+                        </li>
+                        <li>
+                          <a href="#">京东</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="nav pull-right">
+                    <li>
+                      <a href="#">登陆/注册</a>
+                    </li>
+                    <li class="divider-vertical">
+                    </li>
+                    <li class="dropdown" :class="{'open':fg_show_writer}"  v-on:mouseleave="fg_show_writer=false">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" v-on:click="fg_show_writer=!fg_show_writer">作者</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">收藏</a>
+                        </li>
+                        <li>
+                          <a href="#">自创</a>
+                        </li>
+                        <li>
+                          <a href="#">其他</a>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li>
+                          <a href="#">链接3</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row-fluid">
+          <!-- 二级内容 -->
+          <router-view></router-view>
+          <!-- 二级菜单 -->
+          <div class="span1">
+          <img alt="140x140" src="../../assets/img/tx_big.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
